@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfraBuild</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- En-tête -->
+    <header>
+        <div class="container header-container">
+            <img src="/img/logo3.jpg" alt="Logo InfraBuild" class="logo">
+            <div class="slogan">
+                <h1>InfraBuild</h1>
+                
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#apropos">À propos</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- bouton pour basculer entre les deux mode -->
+            <button id="theme-toggle">🌙 Mode sombre</button>
+
+        </div>
+    </header>
+
+
+    <!-- Bannière de bienvenue -->
+    <section class="banniere-bienvenue">
+        <img src="img/banner.png" alt="Bannière InfraBuild" class="banner-img">
+        <div class="overlay">
+            <h1>Bienvenue Chez InfraBuild</h1>
+            <p>Votre partenaire de confiance pour des infrastructures durables</p>
+            <p>Construire l'avenir, pierre par pierre</p>
+        </div>
+    </section>
+
+    <section class="section-services">
+        <div class="container">
+            <div class="services-row">
+                <div class="service-box">
+                    <img src="/img/icon1.png" alt="Creative Designers">
+                    <h3>Creative Designers</h3>
+                </div>
+                <div class="service-box">
+                    <img src="/img/icon2.png" alt="Quality Products">
+                    <h3>Quality Products</h3>
+                </div>
+                <div class="service-box">
+                    <img src="/img/icon3.png" alt="Free Consultation">
+                    <h3>Free Consultation</h3>
+                </div>
+                <div class="service-box">
+                    <img src="/img/icon4.png" alt="Customer Support">
+                    <h3>Customer Support</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- À propos -->
+    <section id="apropos">
+        <div class="container apropos-container">
+            <div class="apropos-texte">
+                <h2>À propos</h2>
+                <p>
+                    InfraBuild est une entreprise spécialisée dans la construction d'infrastructures modernes et durables. 
+                    Depuis plus de 10 ans, nous accompagnons collectivités et entreprises dans leurs projets de bâtiments, 
+                    routes, ponts et ouvrages publics.
+                </p>
+            </div>
+            <div class="apropos-image">
+                <img src="/img/apropos.webp" alt="Image À propos">
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Services -->
+    <section id="services">
+        <div class="container">
+            <h2>Nos Services</h2>
+            <div class="services-grid">
+    
+                <div class="service-card">
+                    <img src="/img/Construction de Bâtiments.jpg" alt="Construction de Bâtiments">
+                    <h3>Construction de Bâtiments</h3>
+                    <p>Réalisation de structures modernes et résistantes pour tous types de projets immobiliers.</p>
+                </div>
+    
+                <div class="service-card">
+                    <img src="/img/Travaux Routiers.jpeg" alt="Travaux Routiers">
+                    <h3>Travaux Routiers</h3>
+                    <p>Construction et entretien de routes, autoroutes et pistes d’accès pour véhicules lourds.</p>
+                </div>
+    
+                <div class="service-card">
+                    <img src="/img/Ouvrages d'art.jpg" alt="Ouvrages d'art">
+                    <h3>Ouvrages d'art</h3>
+                    <p>Conception et construction de ponts, tunnels, viaducs et structures complexes.</p>
+                </div>
+    
+                <div class="service-card">
+                    <img src="/img/Génie Civil.jpg" alt="Génie Civil">
+                    <h3>Génie Civil</h3>
+                    <p>Services complets en ingénierie pour les fondations, structures et infrastructures.</p>
+                </div>
+    
+                <div class="service-card">
+                    <img src="/img/Rénovation & Réhabilitation.jpg" alt="Rénovation & Réhabilitation">
+                    <h3>Rénovation & Réhabilitation</h3>
+                    <p>Modernisation de bâtiments anciens tout en respectant leur identité architecturale.</p>
+                </div>
+    
+                <div class="service-card">
+                    <img src="/img/Urbanisme & Aménagement.jpg" alt="Urbanisme & Aménagement">
+                    <h3>Urbanisme & Aménagement</h3>
+                    <p>Études et réalisations d'espaces publics, parcs, places, zones industrielles et urbaines.</p>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email : contact@infrabuild.com</p>
+            <p>Téléphone : +237 6 70 42 25 97</p>
+            <p>Adresse : Yaounde Cameroun</p>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2025 InfraBuild. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+    
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                toggleBtn.textContent = '☀️ Mode clair';
+            } else {
+                toggleBtn.textContent = '🌙 Mode sombre';
+            }
+        });
+    </script>
+    
+
+</body>
+</html>

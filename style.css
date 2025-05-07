@@ -1,0 +1,308 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Conteneur */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #5e4b01,#644f00, #5e4b01);
+    color: #fff;
+    padding: 20px 0;
+}
+
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 100px;
+    border-radius: 50px;
+    border: solid black;
+}
+
+.slogan h1 {
+    font-size: 28px;
+}
+
+.slogan p {
+    font-style: italic;
+    font-size: 16px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f9d342;
+}
+
+/* Sections */
+section {
+    padding: 40px 0;
+    background: #fff;
+}
+
+section:nth-of-type(even) {
+    background: #e9ecef;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #2a2a2a;
+}
+
+.services-list {
+    list-style: square;
+    padding-left: 20px;
+}
+
+.services-list li {
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.services-list li:hover {
+    color: #007bff;
+    transform: scale(1.02);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #2a2a2a;
+    color: white;
+    padding: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 15px;
+        gap: 10px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    padding: 15px 20px 5px;
+    color: #2a2a2a;
+}
+
+.service-card p {
+    padding: 0 20px 20px;
+    font-size: 15px;
+    color: #555;
+}
+
+.banniere-bienvenue {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.banniere-bienvenue .overlay {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding: 40px;
+}
+
+.banniere-bienvenue h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.banniere-bienvenue p {
+    font-size: 20px;
+}
+
+.section-services {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.services-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.service-box {
+    flex: 1 1 200px;
+    max-width: 220px;
+    margin: auto;
+}
+
+.service-box img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    /* filter: sepia(1) hue-rotate(10deg) saturate(3); */ /* pour donner un effet doré/brun */
+}
+
+.service-box h3 {
+    font-size: 16px;
+    color: #2a2a2a;
+    font-weight: 600;
+}
+
+.apropos-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.apropos-texte {
+    flex: 1;
+    min-width: 280px;
+}
+
+.apropos-image {
+    flex: 1;
+    min-width: 280px;
+}
+
+.apropos-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+/* Bouton de changement de thème */
+#theme-toggle {
+    margin-top: 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: #555;
+}
+
+/* Mode sombre */
+body.dark-mode {
+    background-color: #1c1c1c;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background: linear-gradient(to right, #222, #444);
+}
+
+body.dark-mode nav a {
+    color: #f9d342;
+}
+
+body.dark-mode section {
+    background: #2c2c2c;
+}
+
+body.dark-mode section:nth-of-type(even) {
+    background: #333;
+}
+
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #f1f1f1;
+}
+
+body.dark-mode footer {
+    background-color: #111;
+}
+
+body.dark-mode .service-card {
+    background-color: #2a2a2a;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .service-card p {
+    color: #ccc;
+}
